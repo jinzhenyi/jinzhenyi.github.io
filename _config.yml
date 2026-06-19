@@ -20,17 +20,12 @@ baseurl                  :
 repository               : "jinzhenyi/jinzhenyi.github.io"
 words_per_minute         : 200
 
-# 搜索配置（Algolia）
+# ========== 搜索配置（本地 Lunr） ==========
 search                   : true
-search_full_content      : false          # 可选，是否搜索全文
-search_provider          : algolia        # 指定使用 Algolia
-algolia:
-  application_id         : 'BLBBIX8KP7'   # 例如 'BL...' 在 Algolia 后台可以看到
-  index_name             : 'posts'        # 你创建的索引名称，建议用 'posts'
-  search_only_api_key    : '75cd592481c2ac066105c7a16cb66ba8'   # 公开的只读密钥，可写进配置
-  powered_by             : true           # 是否显示 "Search by Algolia" 标识
+search_full_content      : false
+search_provider          : lunr          # 使用本地 Lunr 搜索，无需 API Key
 
-# 评论系统 - Giscus
+# ========== 评论系统 - Giscus ==========
 comments:
   provider               : "giscus"
   giscus:
@@ -46,11 +41,11 @@ comments:
     lang                 : "zh-CN"
     lazy                 : false
 
-# SEO 验证（Bing / Yandex）
-bing_site_verification   :    # 空
+# ========== SEO 验证（Bing / Yandex） ==========
+bing_site_verification   :    # 填你的 Bing 密钥（如有）
 yandex_site_verification :    # DNS 验证通过后留空即可
 
-# Site Author
+# ========== 站点作者 ==========
 author:
   name             : "JZY"
   avatar           : "/assets/images/tx.png"
@@ -68,7 +63,7 @@ author:
       icon: "fab fa-bilibili"
       url: "https://space.bilibili.com/1230896672"
 
-# Site Footer
+# ========== 页脚 ==========
 footer:
   links:
     - label: "GitHub"
@@ -79,7 +74,7 @@ footer:
       url: "https://space.bilibili.com/1230896672"
   since: "2026"
 
-# 以下为 Jekyll 标准配置（无需改动）
+# ========== Jekyll 标准配置 ==========
 include:
   - .htaccess
   - _pages
@@ -162,13 +157,14 @@ pagination:
     before: 2
     after: 2
 
+# ========== 插件 ==========
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-algolia      # 新增 Algolia 插件
+  # jekyll-algolia 已移除（本地搜索不需要）
 
 whitelist:
   - jekyll-paginate
@@ -176,7 +172,6 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-algolia
 
 category_archive:
   type: liquid
