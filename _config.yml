@@ -6,35 +6,21 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
-# theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
+minimal_mistakes_skin    : "dark"
 
 # Site Settings
 locale                   : "zh-CN"
-direction                : # "ltr" (default), "rtl"
 title                    : "JZY的博客"
 title_separator          : "-"
-subtitle                 : 
 name                     : "JZY"
 description              : "JZY 的个人技术博客，记录学习与思考。"
-url                      : "https://jinzhenyi.github.io"
+url                      : "https://jinzhenyi.dpdns.org"    # ← 已修改
 baseurl                  : 
 repository               : "jinzhenyi/jinzhenyi.github.io"
-teaser                   : 
-logo                     : 
-masthead_title           : 
-breadcrumbs              : 
 words_per_minute         : 200
-enable_copy_code_button  : 
-copyright                : 
-copyright_url            : 
 
-# 评论系统 - Giscus（完整配置）
+# 评论系统 - Giscus
 comments:
   provider               : "giscus"
   giscus:
@@ -50,76 +36,14 @@ comments:
     lang                 : "zh-CN"
     lazy                 : false
 
-  disqus:
-    shortname            :
-  discourse:
-    server               :
-  facebook:
-    appid                :
-    num_posts            :
-    colorscheme          :
-  utterances:
-    theme                :
-    issue_term           :
-  staticman:
-    branch               :
-    endpoint             :
-
-reCaptcha:
-  siteKey                :
-  secret                 :
-
-atom_feed:
-  path                   :
-  hide                   :
-
-search                   : 
-search_full_content      : 
-search_provider          : 
-lunr:
-  search_within_pages    :
-algolia:
-  application_id         :
-  index_name             :
-  search_only_api_key    :
-  powered_by             :
-google:
-  search_engine_id       :
-  instant_search         :
-
-# SEO 相关（Bing 和 Yandex 验证码请填入）
-google_site_verification :
-bing_site_verification  :   # 在这里填你的 Bing 验证代码
-naver_site_verification :
-yandex_site_verification :  # 在这里填你的 Yandex 验证代码
-baidu_site_verification :
-
-# Social Sharing
-twitter:
-  username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :
-og_image_alt             :
-
-social:
-  type                   :
-  name                   :
-  links:
-
-# Analytics
-analytics:
-  provider               : 
-  google:
-    tracking_id          :
-    anonymize_ip         :
+# SEO 验证（Bing/Yandex 留空待填）
+bing_site_verification  : 
+yandex_site_verification : 
 
 # Site Author
 author:
   name             : "JZY"
-  avatar           : "https://114514yyds.dpdns.org/img_20251222_095627_69495c1b108d5.png"
+  avatar           : "/assets/images/tx.png"   # ← 已修改
   bio              : 
   location         : "Shanghai, China"
   email            : "zhenyi20231221@outlook.com"
@@ -145,7 +69,7 @@ footer:
       url: "https://space.bilibili.com/1230896672"
   since: "2026"
 
-# Reading Files
+# 其他配置（保持不变）
 include:
   - .htaccess
   - _pages
@@ -183,14 +107,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -201,18 +123,15 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
   quiet_deps: true
   silence_deprecations: ['import']
 
-# Outputting
 permalink: /:categories/:title/
 timezone: Asia/Shanghai
 
-# Pagination
 paginate: 5
 paginate_path: /page:num/
 
@@ -233,7 +152,6 @@ pagination:
     before: 2
     after: 2
 
-# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -248,7 +166,6 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-# Archives
 category_archive:
   type: liquid
   path: /categories/
@@ -256,13 +173,11 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# HTML Compression
 compress_html:
   clippings: all
   ignore:
     envs: development
 
-# Defaults
 defaults:
   - scope:
       path: ""
