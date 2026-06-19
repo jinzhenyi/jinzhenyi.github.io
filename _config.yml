@@ -15,10 +15,20 @@ title                    : "JZY的博客"
 title_separator          : "-"
 name                     : "JZY"
 description              : "JZY 的个人技术博客，记录学习与思考。"
-url                      : "https://jinzhenyi.dpdns.org"    # ← 已修改
+url                      : "https://jinzhenyi.dpdns.org"
 baseurl                  : 
 repository               : "jinzhenyi/jinzhenyi.github.io"
 words_per_minute         : 200
+
+# 搜索配置（Algolia）
+search                   : true
+search_full_content      : false          # 可选，是否搜索全文
+search_provider          : algolia        # 指定使用 Algolia
+algolia:
+  application_id         : 'BLBBIX8KP7'   # 例如 'BL...' 在 Algolia 后台可以看到
+  index_name             : 'posts'        # 你创建的索引名称，建议用 'posts'
+  search_only_api_key    : '75cd592481c2ac066105c7a16cb66ba8'   # 公开的只读密钥，可写进配置
+  powered_by             : true           # 是否显示 "Search by Algolia" 标识
 
 # 评论系统 - Giscus
 comments:
@@ -36,16 +46,16 @@ comments:
     lang                 : "zh-CN"
     lazy                 : false
 
-# SEO 验证（Bing/Yandex 留空待填）
-bing_site_verification  : 
-yandex_site_verification : 
+# SEO 验证（Bing / Yandex）
+bing_site_verification   :    # 空
+yandex_site_verification :    # DNS 验证通过后留空即可
 
 # Site Author
 author:
   name             : "JZY"
-  avatar           : "/assets/images/tx.png"   # ← 已修改
-  bio              : "JZY的博客"
-  location         : "Shanghai"
+  avatar           : "/assets/images/tx.png"
+  bio              : 
+  location         : "Shanghai, China"
   email            : "zhenyi20231221@outlook.com"
   links:
     - label: "Email"
@@ -69,7 +79,7 @@ footer:
       url: "https://space.bilibili.com/1230896672"
   since: "2026"
 
-# 其他配置（保持不变）
+# 以下为 Jekyll 标准配置（无需改动）
 include:
   - .htaccess
   - _pages
@@ -158,6 +168,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-algolia      # 新增 Algolia 插件
 
 whitelist:
   - jekyll-paginate
@@ -165,6 +176,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-algolia
 
 category_archive:
   type: liquid
