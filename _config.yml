@@ -44,8 +44,8 @@ yandex_site_verification :
 author:
   name             : "JZY"
   avatar           : "/assets/images/tx.png"   # ← 已修改
-  bio              : 
-  location         : "Shanghai, China"
+  bio              : "JZY的博客"
+  location         : "Shanghai"
   email            : "zhenyi20231221@outlook.com"
   links:
     - label: "Email"
