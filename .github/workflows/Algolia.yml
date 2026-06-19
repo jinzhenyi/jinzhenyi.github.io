@@ -1,0 +1,28 @@
+name: Push to Algolia
+
+on:
+  push:
+    branches:
+      - main  # 如果你的默认分支是 master，改成 master
+
+jobs:
+  algolia:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Push to Algolia
+        env:
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+        run: bundle exec jekyll algolia
