@@ -20,9 +20,9 @@ direction                : # "ltr" (default), "rtl" # set the direction of the p
 title                    : "JZY"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
+name                     : "JZY"
 description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://jinzhenyi.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -116,14 +116,14 @@ analytics:
 author:
   name             : "JZY"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "I am an people."
   location         : "Somewhere"
-  email            :
+  email            : "zhenyi20231221@outlook.com"
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
     - label: "Email"
       icon: "fas fa-fw fa-square-envelope"
-      # url: "mailto:your.name@email.com"
+      # url: "zhenyi20231221@outlook.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -137,7 +137,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jinzhenyi"
     - label: "B站"
-      icon: "fas fa-fw fa-link"
+      icon: "fab fa-bilibili"
       url: "https://space.bilibili.com/1230896672"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
