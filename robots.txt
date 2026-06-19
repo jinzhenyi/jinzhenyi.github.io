@@ -1,6 +1,5 @@
 # As a condition of accessing this website, you agree to abide by the following
-# Algolia-Crawler-Verif: A4EB2A5E15006295
-
+#Algolia-Crawler-Verif:A4EB2A5E15006295
 # content signals:
 
 # (a)  If a Content-Signal = yes, you may collect content for the corresponding
