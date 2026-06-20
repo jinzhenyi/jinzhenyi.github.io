@@ -2,8 +2,8 @@
 main:
   - title: "关于"
     url: /about/
-  - title: "文章"
-    url: /_posts/
+  # - title: "文章"
+  #   url: /_posts/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
