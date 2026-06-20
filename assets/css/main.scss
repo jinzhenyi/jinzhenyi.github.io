@@ -1,24 +1,19 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 search: false
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-
----
----
-
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* 改 */
+/* ========== 自定义样式 ========== */
+
 /* 主页文章标题链接改为白色 */
 .archive__item-title a {
-  color: #ffffff !important;      /* 白色，覆盖主题默认颜色 */
+  color: #ffffff !important;
 }
 
 .archive__item-title a:hover {
-  color: #cccccc !important;      /* 鼠标悬停时变为浅灰色，更柔和 */
+  color: #cccccc !important;
 }
