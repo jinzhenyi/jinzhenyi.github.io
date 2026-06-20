@@ -7,3 +7,18 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+---
+---
+
+@import "minimal-mistakes";
+
+/* 改 */
+/* 主页文章标题链接改为白色 */
+.archive__item-title a {
+  color: #ffffff !important;      /* 白色，覆盖主题默认颜色 */
+}
+
+.archive__item-title a:hover {
+  color: #cccccc !important;      /* 鼠标悬停时变为浅灰色，更柔和 */
+}
