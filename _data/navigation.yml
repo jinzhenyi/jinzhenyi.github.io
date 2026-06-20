@@ -1,9 +1,13 @@
 # main links
 main:
+  - title: "关于"
+    url: /about/
+  - title: "文章"
+    url: /posts/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "关于"
-    url: https://jinzhenyi.dpdns.org/minimal-mistakes/about/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
