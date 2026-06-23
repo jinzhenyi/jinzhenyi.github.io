@@ -2,7 +2,7 @@ name: Blog Update
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - '_posts/**/*.md'                # ✅ 已改为你的文章路径
 
