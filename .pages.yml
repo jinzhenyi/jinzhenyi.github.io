@@ -1,0 +1,35 @@
+# 媒体文件配置
+media:
+  - name: images
+    input: images/posts      # 本地存放图片的目录
+    output: /images/posts    # 网站最终访问图片的路径
+    extensions: [png, jpg, webp]
+
+# 内容配置
+content:
+  - name: posts              # 集合名称，内部标识用
+    label: Posts             # 在CMS界面显示的名称
+    type: collection         # 类型为集合（对应一个文件夹）
+    path: _posts             # 对应Jekyll存放文章的文件夹
+    format: yaml-frontmatter # 文件格式为 YAML Front Matter
+    filename: "{year}/{year}-{month}-{day}-{fields.title}.md" # 文件命名规则
+    fields:                  # 定义文章中的字段
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: tags
+        label: Tags
+        type: select         # 注意：没有 'list' 类型
+        list: true           # 通过 'list: true' 实现多选
+        options:
+          values: [Jekyll, GitHub Pages, CMS]
+      - name: body
+        label: Content
+        type: rich-text      # 富文本编辑器
+        options:
+          media: images
