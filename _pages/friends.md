@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 友链
-permalink: /about/
+permalink: /friends/
 author_profile: true
 toc: true
 toc_label: "友链"
