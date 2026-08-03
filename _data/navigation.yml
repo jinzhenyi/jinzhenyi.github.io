@@ -4,6 +4,8 @@ main:
     url: /about/
   - title: "文章"
     url: /_posts/
+  - title: "友链"
+    url: /friends/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
