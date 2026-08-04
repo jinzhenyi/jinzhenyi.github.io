@@ -1,11 +1,9 @@
 ---
 title: 友链
 permalink: /friends/
-date: 2026-08-04
-type: page
+layout: single
+author_profile: false
 ---
-
-<h2 style="text-align: center;">友链</h2>
 
 <style>
   .friend-links {
@@ -55,13 +53,11 @@ type: page
     color: #888;
     margin-top: 2px;
   }
-  /* 只显示名称的卡片（无头像和简介） */
-  .friend-card-simple {
-    justify-content: center;   /* 内容居中 */
+  .footer-text {
     text-align: center;
-  }
-  .friend-card-simple .friend-name {
-    font-size: 18px;          /* 稍微放大一点，填补空白 */
+    margin-top: 30px;
+    font-size: 15px;
+    color: #555;
   }
   @media (prefers-color-scheme: dark) {
     .friend-card {
@@ -71,38 +67,24 @@ type: page
     }
     .friend-desc { color: #aaa; }
   }
-
-  .footer-text {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 15px;
-    color: #555;
-  }
-  .footer-text a {
-    color: #0366d6;
-    text-decoration: none;
-  }
-  .footer-text a:hover {
-    text-decoration: underline;
-  }
 </style>
 
+<h2 style="text-align: center;">🌟 我的朋友们</h2>
+
 <div class="friend-links">
-
-  <!-- woodfish（正常显示头像+简介） -->
-  <a href="https://woodfish.site/newBlog/" class="friend-card" target="_blank" rel="noopener">
-    <img class="friend-avatar" src="https://pic1.imgdb.cn/item/682f3d1658cb8da5c807b704.jpg" alt="woodfish" />
-    <div class="friend-info">
-      <span class="friend-name">woodfish</span>
-      <span class="friend-desc">我喜欢你</span>
-    </div>
-  </a>
-
-  <!-- 二叉树树（只显示名称，无头像、无简介） -->
-  <a href="https://2x.nz" class="friend-card friend-card-simple" target="_blank" rel="noopener">
-    <span class="friend-name">二叉树树</span>
-  </a>
-
+  {% for friend in site.data.friends %}
+    <a href="{{ friend.link }}" class="friend-card" target="_blank" rel="noopener">
+      {% if friend.avatar %}
+        <img class="friend-avatar" src="{{ friend.avatar }}" alt="{{ friend.name }}" />
+      {% endif %}
+      <div class="friend-info">
+        <span class="friend-name">{{ friend.name }}</span>
+        {% if friend.desc %}
+          <span class="friend-desc">{{ friend.desc }}</span>
+        {% endif %}
+      </div>
+    </a>
+  {% endfor %}
 </div>
 
 <div class="footer-text">
