@@ -84,10 +84,10 @@ type: page
 
   <!-- 二叉树树 -->
   <a href="https://2x.nz" class="friend-card" target="_blank" rel="noopener">
-    <img class="friend-avatar" src="https://pic1.imgdb.cn/item/682f3d1658cb8da5c807b704.jpg" alt="二叉树树" />
+    <img class="friend-avatar" src="" alt="二叉树树" />
     <div class="friend-info">
       <span class="friend-name">二叉树树</span>
-      <span class="friend-desc">技术 & 生活</span>
+      <span class="friend-desc">.</span>
     </div>
   </a>
 
@@ -95,4 +95,4 @@ type: page
 
 ---
 
-*欢迎交换友链，联系邮箱：xxxx@xx.com*
+*欢迎交换友链，联系邮箱：zhenyi20231221@outlook.com*
