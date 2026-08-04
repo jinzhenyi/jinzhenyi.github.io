@@ -1,0 +1,49 @@
+name: 友链申请
+description: 申请添加友情链接（请确保您已在本站放置本站链接）
+labels: ["友链申请"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 站点名称
+      placeholder: 
+    validations:
+      required: true
+
+  - type: input
+    id: homepage
+    attributes:
+      label: 站点主页
+      description: 您的博客或网站首页 URL
+      placeholder: 
+    validations:
+      required: true
+
+  - type: input
+    id: friend_page
+    attributes:
+      label: 友链页面
+      description: 您网站上放置了本站链接的具体页面 URL（用于反链检测）
+      placeholder: 
+    validations:
+      required: true
+
+  - type: input
+    id: avatar
+    attributes:
+      label: 头像链接（可选）
+      placeholder: 
+
+  - type: input
+    id: desc
+    attributes:
+      label: 一句话描述（可选）
+      placeholder: 
+
+  - type: checkboxes
+    id: check
+    attributes:
+      label: 确认事项
+      options:
+        - label: 我已将贵站链接（包含 `jinzhenyi.dpdns.org`）添加至我的友链页面
+          required: true
