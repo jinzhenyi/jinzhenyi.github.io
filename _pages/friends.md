@@ -14,6 +14,7 @@ type: page
     gap: 20px;
     justify-content: flex-start;
     margin: 20px 0;
+    margin-left: 30px;
   }
   .friend-card {
     display: flex;
