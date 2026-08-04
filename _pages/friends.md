@@ -1,19 +1,18 @@
 ---
 title: 友链
 permalink: /friends/
-date: 2026-08-03
+date: 2026-08-04
 type: page
 ---
 
-<!-- 标题右移 -->
-<h2 style="text-align: right; margin-right: 40px;">友链</h2>
+<h2 style="text-align: center;">🌟 我的朋友们</h2>
 
 <style>
   .friend-links {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 20px 0;
   }
   .friend-card {
@@ -50,17 +49,19 @@ type: page
     font-weight: 600;
     font-size: 16px;
     line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .friend-desc {
     font-size: 13px;
     color: #888;
     margin-top: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  }
+  /* 只显示名称的卡片（无头像和简介） */
+  .friend-card-simple {
+    justify-content: center;   /* 内容居中 */
+    text-align: center;
+  }
+  .friend-card-simple .friend-name {
+    font-size: 18px;          /* 稍微放大一点，填补空白 */
   }
   @media (prefers-color-scheme: dark) {
     .friend-card {
@@ -70,11 +71,25 @@ type: page
     }
     .friend-desc { color: #aaa; }
   }
+
+  .footer-text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    color: #555;
+  }
+  .footer-text a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
 </style>
 
 <div class="friend-links">
 
-  <!-- woodfish -->
+  <!-- woodfish（正常显示头像+简介） -->
   <a href="https://woodfish.site/newBlog/" class="friend-card" target="_blank" rel="noopener">
     <img class="friend-avatar" src="https://pic1.imgdb.cn/item/682f3d1658cb8da5c807b704.jpg" alt="woodfish" />
     <div class="friend-info">
@@ -83,20 +98,13 @@ type: page
     </div>
   </a>
 
-  <!-- 二叉树树 -->
-  <a href="https://2x.nz" class="friend-card" target="_blank" rel="noopener">
-    <img class="friend-avatar" src="https://pic1.imgdb.cn/item/682f3d1658cb8da5c807b704.jpg" alt="二叉树树" />
-    <div class="friend-info">
-      <span class="friend-name">二叉树树</span>
-      <span class="friend-desc">技术 & 生活</span>
-    </div>
+  <!-- 二叉树树（只显示名称，无头像、无简介） -->
+  <a href="https://2x.nz" class="friend-card friend-card-simple" target="_blank" rel="noopener">
+    <span class="friend-name">二叉树树</span>
   </a>
 
 </div>
 
-<!-- 底部文字右移 -->
-<div style="text-align: right; margin-right: 40px; margin-top: 30px;">
-  <p style="font-size: 15px; color: #555;">
-    欢迎交换友链，联系邮箱：<a href="mailto:zhenyi20231221@outlook.com">zhenyi20231221@outlook.com</a>
-  </p>
+<div class="footer-text">
+  欢迎交换友链，联系邮箱：<a href="mailto:zhenyi20231221@outlook.com">zhenyi20231221@outlook.com</a>
 </div>
