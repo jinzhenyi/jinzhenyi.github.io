@@ -5,7 +5,7 @@ date: 2026-08-04
 type: page
 ---
 
-<h2 style="text-align: center;">🌟 我的朋友们</h2>
+<h2 style="text-align: center;">友链</h2>
 
 <style>
   .friend-links {
