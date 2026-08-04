@@ -1,13 +1,12 @@
 ---
 title: 友链
 permalink: /friends/
-date: 2026-08-04
+date: 2026-08-03
 type: page
 ---
 
-#  友链
-
----
+<!-- 标题右移 -->
+<h2 style="text-align: right; margin-right: 40px;">友链</h2>
 
 <style>
   .friend-links {
@@ -16,7 +15,6 @@ type: page
     gap: 20px;
     justify-content: flex-start;
     margin: 20px 0;
-    margin-left: 20px;
   }
   .friend-card {
     display: flex;
@@ -87,15 +85,18 @@ type: page
 
   <!-- 二叉树树 -->
   <a href="https://2x.nz" class="friend-card" target="_blank" rel="noopener">
-    <img class="friend-avatar" src="" alt="二叉树树" />
+    <img class="friend-avatar" src="https://pic1.imgdb.cn/item/682f3d1658cb8da5c807b704.jpg" alt="二叉树树" />
     <div class="friend-info">
       <span class="friend-name">二叉树树</span>
-      <span class="friend-desc">.</span>
+      <span class="friend-desc">技术 & 生活</span>
     </div>
   </a>
 
 </div>
 
----
-
-# 欢迎交换友链，联系邮箱:      zhenyi20231221@outlook.com*
+<!-- 底部文字右移 -->
+<div style="text-align: right; margin-right: 40px; margin-top: 30px;">
+  <p style="font-size: 15px; color: #555;">
+    欢迎交换友链，联系邮箱：<a href="mailto:zhenyi20231221@outlook.com">zhenyi20231221@outlook.com</a>
+  </p>
+</div>
