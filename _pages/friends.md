@@ -5,7 +5,9 @@ date: 2026-08-04
 type: page
 ---
 
-## 友链
+#  友链
+
+---
 
 <style>
   .friend-links {
@@ -14,7 +16,7 @@ type: page
     gap: 20px;
     justify-content: flex-start;
     margin: 20px 0;
-    margin-left: 30px;
+    margin-left: 20px;
   }
   .friend-card {
     display: flex;
@@ -96,4 +98,4 @@ type: page
 
 ---
 
-*欢迎交换友链，联系邮箱：zhenyi20231221@outlook.com*
+# 欢迎交换友链，联系邮箱:      zhenyi20231221@outlook.com*
