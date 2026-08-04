@@ -6,6 +6,12 @@ author_profile: false
 ---
 
 <style>
+  /* 页面主标题居中 */
+  .page__title {
+    text-align: center;
+  }
+
+  /* 友链卡片样式 */
   .friend-links {
     display: flex;
     flex-wrap: wrap;
@@ -53,12 +59,23 @@ author_profile: false
     color: #888;
     margin-top: 2px;
   }
+
+  /* 底部文字 */
   .footer-text {
     text-align: center;
     margin-top: 30px;
     font-size: 15px;
     color: #555;
   }
+  .footer-text a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+
+  /* 深色模式适配 */
   @media (prefers-color-scheme: dark) {
     .friend-card {
       background: #2d2d2d;
@@ -69,8 +86,7 @@ author_profile: false
   }
 </style>
 
-<h2 style="text-align: center;">🌟 我的朋友们</h2>
-
+<!-- 友链卡片列表 -->
 <div class="friend-links">
   {% for friend in site.data.friends %}
     <a href="{{ friend.link }}" class="friend-card" target="_blank" rel="noopener">
@@ -87,6 +103,7 @@ author_profile: false
   {% endfor %}
 </div>
 
+<!-- 底部引导：申请友链 -->
 <div class="footer-text">
-  欢迎交换友链，联系邮箱：<a href="mailto:zhenyi20231221@outlook.com">zhenyi20231221@outlook.com</a>
+  申请友链：<a href="https://github.com/jinzhenyi/jinzhenyi.github.io/issues/new?template=friend_request.yml" target="_blank">提交 GitHub Issue</a>
 </div>
