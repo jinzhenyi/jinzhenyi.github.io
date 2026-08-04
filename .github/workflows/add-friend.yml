@@ -1,0 +1,34 @@
+name: 自动处理友链申请
+
+on:
+  issues:
+    types: [labeled, opened]
+
+jobs:
+  add-friend:
+    if: contains(github.event.issue.labels.*.name, '友链申请')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: pip install requests PyGithub
+
+      - name: 处理申请
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+          MY_DOMAIN: "jinzhenyi.dpdns.org"   # ← 改为你的反链检测域名
+        run: python scripts/add_friend.py
