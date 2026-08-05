@@ -1,24 +1,23 @@
-// ===== 1. 覆盖主题颜色变量 =====
-$primary-color: #4a6fa5;          // 主色调，柔和蓝
-$link-color: #4a6fa5;
-$link-color-hover: #2d4b6e;
-$text-color: #2c3e50;
-$muted-text-color: #7f8c8d;
-$background-color: #f9fafb;
-$border-color: #e1e4e8;
+// ===== 抹茶绿灰 · 配色变量 =====
+$primary-color: #7d9b76;          // 主色调：温润抹茶绿
+$link-color: #6b8b6b;
+$link-color-hover: #4f6d4f;
+$text-color: #3b4a3b;
+$muted-text-color: #7a8b7a;
+$background-color: #f7f9f6;       // 极浅灰绿背景
+$border-color: #dce4d7;
 
-// 代码块背景等
-$code-background-color: #f3f4f6;
-$code-background-color-dark: #2d2d2d;
+$code-background-color: #eef3ec;
+$code-background-color-dark: #2f3a2f;
 
-// ===== 2. 全局字体 =====
+// ===== 全局字体 =====
 $sans-serif: "Inter", "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
 $serif: "Noto Serif", Georgia, Times, serif;
 $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
 $base-font-size: 1rem;
 
-// ===== 3. 页面整体背景 & 卡片 =====
+// ===== 页面基础 =====
 body {
   background: $background-color;
 }
@@ -30,7 +29,7 @@ body {
   }
 }
 
-// 文章卡片阴影（会用在主页和归档）
+// ===== 卡片样式（归档、主页通用） =====
 .archive__item {
   background: #fff;
   border-radius: 12px;
@@ -40,11 +39,10 @@ body {
   border: 1px solid $border-color;
   transition: box-shadow 0.2s;
   &:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   }
 }
 
-// 重置标题样式
 .archive__item-title {
   margin-top: 0;
   font-size: 1.35rem;
@@ -60,4 +58,148 @@ body {
 // 按钮
 .btn {
   border-radius: 8px;
+}
+.btn--primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: darken($primary-color, 8%);
+  }
+}
+
+// ===== 主页网格 =====
+.section-title {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+  color: #3b4a3b;
+}
+
+.grid__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid__item {
+  list-style: none;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  border: 1px solid $border-color;
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  }
+}
+
+.card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 1.2rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.card__excerpt {
+  color: $muted-text-color;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card__meta {
+  font-size: 0.8rem;
+  color: #a2b0a2;
+  margin-top: 0.5rem;
+}
+
+// ===== 文章页美化 =====
+.page__inner-wrap {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  max-width: 860px;
+  margin: 2rem auto;
+}
+
+.page__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2d3a2d;
+}
+
+.page__meta {
+  color: #95a595;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.page__content {
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid #e7efe4;
+    padding-bottom: 0.3rem;
+    color: #3b4a3b;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    color: #3b4a3b;
+  }
+  p {
+    margin-bottom: 1.3rem;
+  }
+  img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    max-width: 100%;
+  }
+  blockquote {
+    border-left: 4px solid #7d9b76;
+    background: #f3f7f2;
+    padding: 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    color: #3b4a3b;
+  }
+  pre {
+    border-radius: 12px;
+    background: #2f3a2f;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+// ===== 导航栏 =====
+.masthead {
+  background: #ffffff;
+  border-bottom: 1px solid #dce4d7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.greedy-nav a {
+  color: #3b4a3b;
+  font-weight: 500;
+  &:hover {
+    color: #7d9b76;
+  }
 }
