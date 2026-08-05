@@ -1,4 +1,21 @@
-<div class="hero" style="background: linear-gradient(135deg, #9aaf8d, #b6c9a5); color: #fff; padding: 3rem 2rem; border-radius: 16px; margin-bottom: 2rem;">
-  <h1 style="margin-top:0;">👋 你好，我是 [你的名字]</h1>
-  <p style="font-size:1.2rem; opacity:0.95;">这里写一句个人简介，或者换成你喜欢的任何 HTML。</p>
+---
+layout: archive
+---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
+
+{{ content }}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html locale=locale entries=posts type=entries_layout %}
 </div>
+
+{% include paginator.html locale=locale %}
