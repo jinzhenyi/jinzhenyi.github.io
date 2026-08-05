@@ -1,0 +1,63 @@
+// ===== 1. 覆盖主题颜色变量 =====
+$primary-color: #4a6fa5;          // 主色调，柔和蓝
+$link-color: #4a6fa5;
+$link-color-hover: #2d4b6e;
+$text-color: #2c3e50;
+$muted-text-color: #7f8c8d;
+$background-color: #f9fafb;
+$border-color: #e1e4e8;
+
+// 代码块背景等
+$code-background-color: #f3f4f6;
+$code-background-color-dark: #2d2d2d;
+
+// ===== 2. 全局字体 =====
+$sans-serif: "Inter", "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+$serif: "Noto Serif", Georgia, Times, serif;
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+$base-font-size: 1rem;
+
+// ===== 3. 页面整体背景 & 卡片 =====
+body {
+  background: $background-color;
+}
+
+.page__content {
+  p, li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
+
+// 文章卡片阴影（会用在主页和归档）
+.archive__item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid $border-color;
+  transition: box-shadow 0.2s;
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+}
+
+// 重置标题样式
+.archive__item-title {
+  margin-top: 0;
+  font-size: 1.35rem;
+  a {
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+// 按钮
+.btn {
+  border-radius: 8px;
+}
