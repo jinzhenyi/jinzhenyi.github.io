@@ -4,16 +4,34 @@ search: false
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+/* ==========================================
+   抹茶绿灰 · 主配色变量（必须在主题导入前）
+   ========================================== */
+$primary-color: #7d9b76;
+$link-color: #6b8b6b;
+$link-color-hover: #4f6d4f;
+$text-color: #3b4a3b;
+$muted-text-color: #7a8b7a;
+$background-color: #f7f9f6;
+$border-color: #dce4d7;
+
+/* 如果不用主题自带的皮肤，就把下面这行注释掉，
+   否则它的颜色会盖掉你上面定义的变量 */
+/* @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; */
+
 @import "minimal-mistakes";
 
-/* ========== 自定义样式 ========== */
+/* ==========================================
+   自定义视觉样式
+   ========================================== */
 
-/* 主页文章标题链接改为白色 */
+/* 主页文章标题链接（改为深灰绿，配合浅色卡片背景） */
 .archive__item-title a {
-  color: #ffffff !important;
+  color: #3b4a3b !important;
+}
+.archive__item-title a:hover {
+  color: #7d9b76 !important;
 }
 
-.archive__item-title a:hover {
-  color: #cccccc !important;
-}
+/* 如果之前创建过 _sass/custom.scss，可以继续保留，
+   在这里加一行导入即可：@import "custom"; */
