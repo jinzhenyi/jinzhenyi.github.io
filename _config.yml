@@ -34,7 +34,7 @@ comments:
     category_id          : "DIC_kwDOS-4UFs4C_dV1"
     discussion_term      : "pathname"
     reactions_enabled    : "1"
-    theme                : "Noborder_light"
+    theme                : "https://jinzhenyi.dpdns.org/assets/css/giscus-theme.css"
     strict               : "0"
     input_position       : "bottom"
     emit_metadata        : "0"
