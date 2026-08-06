@@ -4,22 +4,20 @@ search: false
 
 @charset "utf-8";
 
-/* ==========================================
-   抹茶绿灰 · 主配色变量（必须在主题导入前）
-   ========================================== */
-$primary-color: #7d9b76;
-$link-color: #6b8b6b;
-$link-color-hover: #4f6d4f;
-$text-color: #3b4a3b;
-$muted-text-color: #7a8b7a;
-$background-color: #f7f9f6;
-$border-color: #dce4d7;
+// ===== 纯抹茶绿配色变量 =====
+$primary-color: #7d9b76;        // 主抹茶绿
+$link-color: #6b8b6b;           // 链接深抹茶
+$link-color-hover: #4f6d4f;     // 悬停更深
+$text-color: #1e3b1e;           // 正文：深抹茶绿（原来灰色已换）
+$muted-text-color: #5a7a5a;     // 次要文字：中等抹茶绿
+$background-color: #f7f9f6;     // 背景淡绿（保留）
+$border-color: #dce4d7;         // 边框浅绿
 
-/* 如果不用主题自带的皮肤，就把下面这行注释掉，
-   否则它的颜色会盖掉你上面定义的变量 */
-/* @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; */
+// 不导入皮肤，避免覆盖
+// @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 
 @import "minimal-mistakes";
+@import "custom";
 
 /* ==========================================
    自定义视觉样式
