@@ -1,0 +1,38 @@
+/* ===== 抹茶绿 · giscus 自定义主题 ===== */
+:root {
+  /* 文字颜色 */
+  --color-text-primary: #1e3b1e;      /* 主要文字：深抹茶绿 */
+  --color-text-secondary: #4a6a4a;    /* 次要文字（如计数、时间）：中等抹茶绿 */
+  --color-text-link: #6b8b6b;         /* 链接 */
+  --color-text-link-hover: #7d9b76;
+
+  /* 背景颜色 */
+  --color-bg-primary: #ffffff;        /* 主背景 */
+  --color-bg-secondary: #f7f9f6;      /* 次背景（代码块、输入框） */
+  --color-bg-tertiary: #eef3ec;
+
+  /* 边框 */
+  --color-border-primary: #dce4d7;
+  --color-border-secondary: #e7efe4;
+
+  /* 按钮 */
+  --color-btn-primary-bg: #7d9b76;
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-border: #6b8b6b;
+  --color-btn-primary-hover-bg: #6b8b6b;
+  --color-btn-outline-text: #6b8b6b;
+  --color-btn-outline-border: #6b8b6b;
+
+  /* 输入框 */
+  --color-input-bg: #ffffff;
+  --color-input-border: #dce4d7;
+
+  /* 标签、徽章 */
+  --color-label-text: #4a6a4a;
+  --color-label-border: #dce4d7;
+  --color-label-bg: #f3f7f2;
+
+  /* 反应按钮 */
+  --color-reaction-btn-bg: #f7f9f6;
+  --color-reaction-btn-hover-bg: #dce4d7;
+}
