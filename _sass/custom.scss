@@ -1,5 +1,5 @@
 // ========================================
-//  纯抹茶绿 · 视觉美化（不含灰色）
+//  纯抹茶绿 · 全局视觉美化（不含灰色）
 // ========================================
 
 // 基础排版
@@ -8,21 +8,34 @@ body {
   font-family: "Inter", "Segoe UI", Roboto, -apple-system, sans-serif;
 }
 
-// 导航栏
+// ===== 导航栏：彻底统一纯白，去掉绿色底块 =====
 .masthead {
-  background: #ffffff;
-  border-bottom: 1px solid #dce4d7;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  background: #ffffff !important;
 }
-.greedy-nav a {
-  color: #2d4a2d;               // 深绿，清晰
+.greedy-nav {
+  background: transparent !important;
+}
+.greedy-nav a,
+.greedy-nav .nav__list-item a,
+.greedy-nav .masthead__menu-item a {
+  background: transparent !important;
+  color: #1e3b1e !important;
   font-weight: 500;
   &:hover {
-    color: #7d9b76;
+    background: transparent !important;
+    color: #7d9b76 !important;
   }
 }
+// 当前页面菜单项，只保留下划线，不用背景色
+.greedy-nav .active a,
+.greedy-nav a.active,
+.masthead__menu-item.active a {
+  background: transparent !important;
+  color: #1e3b1e !important;
+  border-bottom: 2px solid #7d9b76;
+}
 
-// 卡片样式（主页文章列表、归档）
+// ===== 卡片样式（主页文章列表、归档） =====
 .archive__item {
   background: #ffffff;
   border-radius: 12px;
@@ -39,7 +52,7 @@ body {
   margin-top: 0;
   font-size: 1.35rem;
   a {
-    color: #1e3b1e;             // 标题深抹茶绿
+    color: #1e3b1e;
     text-decoration: none;
     &:hover {
       color: #7d9b76;
@@ -47,10 +60,10 @@ body {
   }
 }
 .archive__item-excerpt {
-  color: #4a6a4a;               // 摘要用中等绿，不灰
+  color: #4a6a4a;
 }
 
-// 按钮
+// ===== 按钮 =====
 .btn {
   border-radius: 8px;
 }
@@ -62,7 +75,7 @@ body {
   }
 }
 
-// 文章详情页美化
+// ===== 文章详情页美化 =====
 .page__inner-wrap {
   background: #ffffff;
   border-radius: 16px;
@@ -74,10 +87,10 @@ body {
 .page__title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #1e3b1e;               // 文章大标题深绿
+  color: #1e3b1e;
 }
 .page__meta {
-  color: #5a7a5a;               // 日期、分类用中等绿
+  color: #5a7a5a;
   font-size: 0.9rem;
   margin-bottom: 2rem;
 }
@@ -87,7 +100,7 @@ body {
     margin-top: 2rem;
     border-bottom: 2px solid #e7efe4;
     padding-bottom: 0.3rem;
-    color: #2d4a2d;             // 二级标题深绿
+    color: #2d4a2d;
   }
   h3 {
     color: #2d4a2d;
@@ -95,7 +108,7 @@ body {
   p {
     margin-bottom: 1.3rem;
     line-height: 1.7;
-    color: #1e3b1e;             // 正文深绿，高对比
+    color: #1e3b1e;
   }
   img {
     border-radius: 12px;
@@ -107,7 +120,7 @@ body {
     background: #f3f7f2;
     padding: 1rem 1.5rem;
     border-radius: 0 8px 8px 0;
-    color: #2d4a2d;             // 引用文字深绿
+    color: #2d4a2d;
   }
   pre {
     border-radius: 12px;
@@ -116,7 +129,7 @@ body {
   }
 }
 
-// 侧边栏/作者卡片
+// ===== 侧边栏/作者卡片 =====
 .sidebar {
   .author__avatar img {
     border-radius: 50%;
@@ -130,15 +143,23 @@ body {
   }
 }
 
-// 分页导航
+// ===== 分页导航 =====
 .pagination {
   .pagination--pager {
     color: #7d9b76;
   }
 }
 
-// 标签、分类等文字
+// ===== 标签、分类等文字 =====
 .taxonomy__index a,
 .page__taxonomy-item {
   color: #2d4a2d;
+}
+
+// ===== 评论区（giscus）外部兜底样式 =====
+// 注意：giscus 是 iframe 嵌入，最终颜色由 giscus-theme.css 控制
+// 这里的样式仅影响评论区外围容器（如果有的话）
+.comments-section,
+.page__comments {
+  color: #1e3b1e;
 }
