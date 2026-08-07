@@ -1,14 +1,14 @@
-/* ===== 抹茶绿 · giscus 自定义主题 ===== */
+/* ===== 抹茶绿 · giscus 自定义主题（完整修复版） ===== */
 :root {
   /* 文字颜色 */
-  --color-text-primary: #1e3b1e;      /* 主要文字：深抹茶绿 */
-  --color-text-secondary: #4a6a4a;    /* 次要文字（如计数、时间）：中等抹茶绿 */
-  --color-text-link: #6b8b6b;         /* 链接 */
+  --color-text-primary: #1e3b1e;
+  --color-text-secondary: #4a6a4a;
+  --color-text-link: #6b8b6b;
   --color-text-link-hover: #7d9b76;
 
   /* 背景颜色 */
-  --color-bg-primary: #ffffff;        /* 主背景 */
-  --color-bg-secondary: #f7f9f6;      /* 次背景（代码块、输入框） */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f7f9f6;
   --color-bg-tertiary: #eef3ec;
 
   /* 边框 */
@@ -26,13 +26,40 @@
   /* 输入框 */
   --color-input-bg: #ffffff;
   --color-input-border: #dce4d7;
+}
 
-  /* 标签、徽章 */
-  --color-label-text: #4a6a4a;
-  --color-label-border: #dce4d7;
-  --color-label-bg: #f3f7f2;
+/* ===== 强制修复输入框背景和边框 ===== */
+.gsc-comment-box-textarea,
+.gsc-comment-box textarea,
+.gsc-reply-box textarea {
+  background-color: #ffffff !important;   /* 白色背景，不再是透明 */
+  border: 1px solid #dce4d7 !important;   /* 抹茶绿边框，不再是黑色 */
+  color: #1e3b1e !important;              /* 输入文字也是深抹茶绿 */
+  border-radius: 8px !important;
+  padding: 0.8rem !important;
+}
 
-  /* 反应按钮 */
-  --color-reaction-btn-bg: #f7f9f6;
-  --color-reaction-btn-hover-bg: #dce4d7;
+/* 聚焦时边框加深 */
+.gsc-comment-box-textarea:focus,
+.gsc-comment-box textarea:focus,
+.gsc-reply-box textarea:focus {
+  border-color: #7d9b76 !important;
+  box-shadow: 0 0 0 2px rgba(125, 155, 118, 0.2) !important;
+}
+
+/* 修复预览区背景（如果有） */
+.gsc-comment-box-preview {
+  background-color: #f7f9f6 !important;
+  border: 1px solid #dce4d7 !important;
+}
+
+/* 回复按钮也抹茶化 */
+.gsc-reply-button,
+button.gsc-reply-button {
+  background-color: #7d9b76 !important;
+  border-color: #6b8b6b !important;
+  color: #fff !important;
+}
+.gsc-reply-button:hover {
+  background-color: #6b8b6b !important;
 }
